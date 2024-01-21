@@ -7,3 +7,5 @@ react框架 使用next.js
         locales文件夹下是语言切换；
         page.tsx是各个页面的路由；
   目前问题：页面渲染会出错，导致404错误，初步判断为Window not defined问题，尚未解决
+# wapapapapoo 2024/1/21
+  解决渲染及404问题,解决方法：改用next的动态路由

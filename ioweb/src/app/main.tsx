@@ -29,29 +29,29 @@ export default function Main() {
 
   return (
     <div>
-        {/* <I18nextProvider i18n={i18n}></I18nextProvider> */}
-        <header>
-          {/* <a href="#" className="logo">I/O CLUB </a> */}
-          <Link to="/" className="logo">I/O CLUB</Link>
-<ul>
-  <li><Link to="/home">主页</Link></li>
-  <li><Link to="/community">社区</Link></li>
-  <li><Link to="/about">关于</Link></li>
-  <li><Link to="/overview">控制台</Link></li>
-  <li><Link to="/login">登录/注册</Link></li>
-</ul>
-        </header>
-<section>
-{typeof window !== 'undefined' && (
-<Image src={moon2} className="moon" style={moonStyle} alt='moon'/>
-)}
-{/* <Image src={cloud} className="cloud" style={cloudStyle} alt='cloud'/> */}
-  <h2 className="txt">I/O CLUB</h2>
-  <a href="#" className="btn">进入</a>
-</section>
-{/* <div className="content">
+      {/* <I18nextProvider i18n={i18n}></I18nextProvider> */}
+      <header>
+        {/* <a href="#" className="logo">I/O CLUB </a> */}
+        <Link to="/" className="logo">I/O CLUB</Link>
+        <ul>
+          <li><Link to="/home">主页</Link></li>
+          <li><Link to="/community">社区</Link></li>
+          <li><Link to="/about">关于</Link></li>
+          <li><Link to="/overview">控制台</Link></li>
+          <li><Link to="/login">登录/注册</Link></li>
+        </ul>
+      </header>
+      <section>
+        {typeof window !== 'undefined' && (
+          <Image src={moon2} className="moon" style={moonStyle} alt='moon' />
+        )}
+        {/* <Image src={cloud} className="cloud" style={cloudStyle} alt='cloud'/> */}
+        <h2 className="txt">I/O CLUB</h2>
+        <a href="#" className="btn">进入</a>
+      </section>
+      {/* <div className="content">
   <p>这里放置一些介绍宣传的内容（图片，文字等等等）</p>
 </div> */}
-      </div>
+    </div>
   );
 }

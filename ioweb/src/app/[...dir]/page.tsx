@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-const Router_1 = dynamic(() => import('./router_1'), {
+const Router_1 = dynamic(() => import('../router_1'), {
 	ssr: false
 });
 

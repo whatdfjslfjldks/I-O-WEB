@@ -17,7 +17,7 @@ export default function Console() {
   <li><Link to="/home">主页</Link></li>
   <li><Link to="/community">社区</Link></li>
   <li><Link to="/about">关于</Link></li>
-  <li><Link to="/console">控制台</Link></li>
+  <li><Link to="/overview">控制台</Link></li>
   <li><Link to="/login">登录/注册</Link></li>
 </ul>
         </header>
