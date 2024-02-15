@@ -1,31 +1,19 @@
-import React from 'react';
-import { Layout } from 'antd';
-import "../styles.css"
-import CustomSider from './CustomSider';
-import Title from './Title';
+import ConsoleUi from "./ConsoleUi";
 
+export default function TodoComponent(){
 
+  return(
+    <div>
+      <ConsoleUi
+       SelectedTitleMenu="console"
+       SelectedConsoleMenu="todo"
+       ConsoleContent={
+         <div>
+           <h1 className="text-black">Todo</h1>
+         </div>
+       }
 
-
-const {Content } = Layout;
-
-export default function TodoComponent() {
-
-
-  return (
-    <Layout className='layout'>
-      <CustomSider menu='todo'/>
-      <Layout>
-        <div style={{ position: 'relative' }}>
-          <Content>
-            <div className='show-main'>
-            <Title menu='todo'/>
-              {/* ------------------------- */}
-       </div>
-          </Content>
-        </div>
-      </Layout>
-    </Layout>
-  );
-};
-
+       />
+    </div>
+  )
+}

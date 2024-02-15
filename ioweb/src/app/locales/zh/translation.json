@@ -16,5 +16,10 @@
   "picture":"图片",
    "createlist":"创建列表",
    "enterlistname":"输入列表名字",
-   "listnametip":"列表名字不能为空"
+   "listnametip":"列表名字不能为空",
+   "community":"社区",
+   "console":"控制台",
+   "about":"关于",
+   "logout":"退出",
+   "login":"登录"
 }

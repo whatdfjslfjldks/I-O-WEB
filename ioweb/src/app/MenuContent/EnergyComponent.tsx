@@ -1,31 +1,19 @@
-import React from 'react';
-import { Layout} from 'antd';
-import "../styles.css"
-import CustomSider from './CustomSider';
-import Title from './Title';
-/*----------------------------------------*/
+import ConsoleUi from "./ConsoleUi";
 
-const {Content } = Layout;
-export default function EnergyComponent() {
+export default function EnergyComponent(){
 
-  return (
-    <Layout>
-       <CustomSider menu='energy'/>
-      <Layout>
-        <div style={{ position: 'relative' }}>
-          <Content>
-          <div className='show-main'>
-          <Title menu='energy'/>
-          <div className='show-main'>
-              这是能源界面
-            </div>
-            </div>
-          </Content>
-        </div>
-      </Layout>
-    </Layout>
-  );
-};
+  return(
+    <div>
+      <ConsoleUi
+       SelectedTitleMenu="console"
+       SelectedConsoleMenu="energy"
+       ConsoleContent={
+         <div>
+           <h1 className="text-black">Energy</h1>
+         </div>
+       }
 
-
-
+       />
+    </div>
+  )
+}

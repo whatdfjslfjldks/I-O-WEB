@@ -1,29 +1,20 @@
-'use client'
 import React, { useState, useEffect } from 'react';
 import {Layout } from 'antd';
-import "../styles.css"
 import { useTranslation } from 'react-i18next';
-import CustomSider from './CustomSider';
-import Title from './Title';
-
-
-
 const { Sider, Content } = Layout;
 
-export default function SettingComponent() {
+import ConsoleUi from "./ConsoleUi";
+export default function SettingComponent(){
+
+
     const { t, i18n } = useTranslation();
     const [selectedLanguage, setSelectedLanguage] = useState('简体中文');
 
-    const [value, setValue] = useState("default");
-
-  
     const [selectedOption, setSelectedOption] = useState('');
 
-    // 存储当前语言选项
     const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('language'));
 
     useEffect(() => {
-        // 根据当前语言选项更新选项
         switch (currentLanguage) {
             case 'en':
                 setSelectedOption('English');
@@ -90,34 +81,41 @@ export default function SettingComponent() {
             i18n.changeLanguage(newLanguage);
         }
     };
-    return (
-        <Layout className='layout'>
-         <CustomSider menu='setting' />
-            <Layout>
-                <div style={{ position: 'relative' }}>
-                    <Content>
-                        <div className='show-main'>
-                           <Title menu='setting'/>
-                                    <div className='set-box'>
-                                        <p>{t('language')}:</p>
-                                        <select value={selectedOption} onChange={handleSelectChange} defaultValue={selectedLanguage}>
-                                            <option>简体中文</option>
-                                            <option>繁體中文</option>
-                                            <option>吙❤緈雯</option>
-                                            <option>English</option>
-                                            <option>日本語</option>
-                                            <option>Français</option>
-                                            <option>한국어</option>
-                                        </select>
-                                    </div>
-                                    <p style={{ textAlign: 'center', fontSize: '56px' }}>背景添加点交互式内容</p>
-                                </div>
-                    </Content>
-                </div>
-            </Layout>
-        </Layout>
-    );
-};
 
+  return(
+    <div>
+      <ConsoleUi
+       SelectedTitleMenu="console"
+       SelectedConsoleMenu="setting"
+       ConsoleContent={
 
+               <div style={{ position: 'relative' }}>
+                   <Content>
+                                   <div>
+                                       <p className='text-black'>{t('language')}:</p>
+                                       <select
+  value={selectedOption}
+  onChange={handleSelectChange}
+  defaultValue={selectedLanguage}
+  className="bg-red-500 text-black"
+>
+  <option>简体中文</option>
+  <option>繁體中文</option>
+  <option>吙❤緈雯</option>
+  <option>English</option>
+  <option>日本語</option>
+  <option>Français</option>
+  <option>한국어</option>
+</select>
+
+                                   </div>
+                   </Content>
+               </div>
+
+       }
+
+       />
+    </div>
+  )
+}
 

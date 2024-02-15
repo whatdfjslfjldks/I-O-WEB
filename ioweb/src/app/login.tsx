@@ -1,9 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import "./styles.css"
-import './border.css';
-
 
 export default function Login() {
   const color='white';

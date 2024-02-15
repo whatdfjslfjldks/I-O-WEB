@@ -1,6 +1,7 @@
 import React from 'react';
-import "./styles.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import "./globals.css";
 
 import Login from './login';
 import Register from './register';
@@ -22,19 +23,19 @@ import HistoryComponent from './MenuContent/HistoryComponent';
 import MediaComponent from './MenuContent/MediaComponent';
 import TodoComponent from './MenuContent/TodoComponent';
 import SettingComponent from './MenuContent/SettingComponent';
-import ProfileComponent from './MenuContent/ProfileComponent';
-import VideoMedia from './MenuContent/VideoMedia';
-import PictureMedia from './MenuContent/PictureMedia';
+import ClientEnvWrap from './utils/clientEnvWrap';
 /*----------------------------------------*/
-function Router_1() {
+import ConsoleUi from './MenuContent/ConsoleUi';
+
+export default function View() {
   return (
     <div>
-      {typeof window !== 'undefined' && (
+   <ClientEnvWrap>
         <I18nextProvider i18n={i18n}>
           <Router>
             <Routes>
               {/* 默认界面 */}
-              <Route path="/" element={<Main />} />
+              <Route path="/" element={<OverviewComponent />} />
               {/* 主页 */}
               <Route path="/home" element={<Home />} />
               {/* 社区 */}
@@ -65,18 +66,11 @@ function Router_1() {
               <Route path='/todo' element={<TodoComponent />} />
               {/* 设置 */}
               <Route path='/setting' element={<SettingComponent />} />
-              {/* 个人中心 */}
-              <Route path='/profile' element={<ProfileComponent />} />
-              {/* 视频 */}
-              <Route path='/media/video' element={<VideoMedia />} />
-              {/* 图片 */}
-              <Route path='/media/picture' element={<PictureMedia />} />
+  
             </Routes>
           </Router>
         </I18nextProvider>
-      )}
+    </ClientEnvWrap>
     </div>
   );
-}
-
-export default Router_1; 
+} 
