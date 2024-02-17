@@ -43,7 +43,7 @@ export default function View() {
               {/* 关于 */}
               <Route path="/about" element={<About />} />
               {/* 控制台 */}
-              <Route path="/console" element={<Console />} />
+              <Route path="/console" element={<OverviewComponent />} />
               {/* 登录 */}
               <Route path="/login" element={<Login />} />
               {/* 注册 */}

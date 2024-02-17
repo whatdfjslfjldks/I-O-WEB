@@ -4,14 +4,15 @@ import { Link } from 'react-router-dom';
 
 export default function Login() {
   const color='white';
-  const [speed,setSpeed]=useState("0");
- //当 speed 改变时更新动画
- useEffect(() => {
-  const formElement = document.querySelector('.form') as HTMLElement;
-  if (formElement) {
-    formElement.style.animation = `test ${speed}s linear infinite`;
-  }
-}, [speed]);
+
+//   const [speed,setSpeed]=useState("0");
+//  //当 speed 改变时更新动画
+//  useEffect(() => {
+//   const formElement = document.querySelector('.form') as HTMLElement;
+//   if (formElement) {
+//     formElement.style.animation = `test ${speed}s linear infinite`;
+//   }
+// }, [speed]);
 
 
   //用户名登录
@@ -145,7 +146,7 @@ export default function Login() {
         console.error('Error:', error);
             // const containerElement = document.querySelector('.container');
     // containerElement.style.animation = `falling 1s ease-in-out infinite alternate`;
-    setSpeed("0.1");
+    // setSpeed("0.1");
 
     // // 获取 body 元素
     // const body = document.querySelector('body');
